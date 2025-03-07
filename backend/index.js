@@ -23,6 +23,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/test',(req,res)=>{
+  res.json("working")
+})
 // Routes
 app.use('/api/recipes', routes);
 
