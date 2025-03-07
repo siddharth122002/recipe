@@ -13,7 +13,10 @@ const RecipeForm = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      await axios.post("http://localhost:3000/api/recipes", formData);
+      await axios.post(
+        "https://recipe-backend-ecru.vercel.app/api/recipes",
+        formData
+      );
       alert("Recipe added successfully!");
       setFormData({
         title: "",

@@ -7,7 +7,9 @@ const SurpriseMeButton = () => {
 
   const fetchRandomRecipe = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/recipes");
+      const response = await axios.get(
+        "https://recipe-backend-ecru.vercel.app/api/recipes"
+      );
       const recipes = response.data;
       const randomIndex = Math.floor(Math.random() * recipes.length);
       setRandomRecipe(recipes[randomIndex]);

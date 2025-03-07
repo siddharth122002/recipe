@@ -12,7 +12,7 @@ function Categorize() {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/recipes/categories"
+          "https://recipe-backend-ecru.vercel.app/api/recipes/categories"
         );
 
         setCategories(response.data);
@@ -29,7 +29,7 @@ function Categorize() {
     if (newCategory.trim()) {
       try {
         const res = await axios.post(
-          "http://localhost:3000/api/recipes/categorize",
+          "https://recipe-backend-ecru.vercel.app/api/recipes/categorize",
           { newCategory }
         );
 
@@ -60,7 +60,7 @@ function Categorize() {
       try {
         // Update the recipe's category in the backend
         await axios.put(
-          `http://localhost:3000/api/recipes/${draggedRecipe._id}/category`,
+          `https://recipe-backend-ecru.vercel.app/api/recipes/${draggedRecipe._id}/category`,
           {
             newCategory: targetCategory,
           }

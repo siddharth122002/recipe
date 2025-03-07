@@ -7,7 +7,7 @@ const RecipeList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/recipes")
+      .get("https://recipe-backend-ecru.vercel.app/api/recipes")
       .then((response) => setRecipes(response.data))
       .catch((error) => console.error(error));
   }, []);
